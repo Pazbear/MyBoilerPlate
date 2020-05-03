@@ -1,0 +1,20 @@
+_actions
+_reducer
+=> Redux를 위한 폴더
+
+components/views
+=> Page 넣는 폴더
+
+components/views/Sections
+=> Page 관련 css파일 , component 들을 넣음
+
+App.js
+=> Routing 관련 일을 처리
+
+Config.js => 환경 변수 등을 정함
+
+hoc
+=> Higher Order component
+
+utils
+=>여러 군데에서 쓰일 수 있는 것들을 넣어 어디서든 사용 가능하게 만듬
