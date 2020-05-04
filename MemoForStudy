@@ -1,0 +1,11 @@
+NPM vs NPX
+
+NPM : Node Package Manager
+
+install
+-g 추가 시 global bin/directory에 저장
+추가 안할 시 node_modules에 추가
+
+NPX: npm registry에서 다운로드 없이 실행
+-disk space 낭비 x
+-항상 최신 버전을 사용

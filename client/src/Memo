@@ -18,3 +18,56 @@ hoc
 
 utils
 =>여러 군데에서 쓰일 수 있는 것들을 넣어 어디서든 사용 가능하게 만듬
+
+
+REDUX
+상태 관리 라이브러리
+=>State??
+
+Props vs  State
+
+Props는 데이터의 이동이 부모 컴포넌트에서 자식 컴포넌트로만.
+자식 컴포넌트에서 데이터의 변환이 불가.
+
+State는 컴포넌트 내에서 사용되는 데이터
+데이터 변환이 가능
+변환시 reRendering
+
+
+
+Redux 데이터 Flow
+                dispatch                     subscribe
+=>React Componenet -> Action -> Reducer-> Store -> React Componenet
+한 방향 플로우
+
+Action
+ex)
+{type:'Like_Article', articleId:42}
+
+Reducer
+ex)
+(previousState, action) => nextState
+=> 이전 state과 action object를 받은 후 next state을 리턴
+
+Store
+=> application의 state들을 감싸고 있음.
+=>저장된 여러 메소드들을 통해 관리
+
+
+Redux 사용 전 세팅
+
+npm install redux react-redux redux-promise redux-thunk --save
+
+redux-promise와 redux-thunk는 redux를 사용하기 더 쉽게 해줌
+
+데이터 Flow의 Store 는 plain object밖에 받지 못함.
+하지만 경우에 따라 Promise 형식과 Function 형식이 들어올 때도 있음.
+이 때 Promise는 redux-promise가 , Function은 redux-thunk가 데이터를 처리하는
+방법을 디스패치할 때 알려줌.
+
+
+Class Componenet vs Functional Componenet
+Functional Component는 짧고 간단한 코드를 사용하고 빠른 반면
+Class Component에 비해 사용 가능한 기능이 한정되어있었지만
+'React Hook'이 나온 이후로 가능해짐.
+React Hook을 사용해 plate 만드는 중...
