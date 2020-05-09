@@ -11,20 +11,18 @@ import LandingPage from './components/views/LandingPage/LandingPage'
 import LoginPage from './components/views/LoginPage/LoginPage'
 import RegisterPage from './components/views/RegisterPage/RegisterPage'
 import Footer from './components/views/Footer/Footer'
+import Auth from './hoc/auth'
 function App() {
   return (
     <Router>
       <div>
         <NavBar/>
         <Switch>
-          <Route path="/register">
-            <RegisterPage />
+          <Route path="/register" component={Auth(RegisterPage, false)}>
           </Route>
-          <Route path="/login">
-            <LoginPage />
+          <Route path="/login" component={Auth(LoginPage, false)}>
           </Route>
-          <Route path="/">
-            <LandingPage />
+          <Route path="/" component={Auth(LandingPage, null)}>
           </Route>
         </Switch>
         <Footer/>
